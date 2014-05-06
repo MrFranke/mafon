@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mafon</title>
+    <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <script src="/js/vendors/exoskeleton/exoskeleton.js"></script>
+    <script>
+        // Передаем параметры приложения
+        require = {
+            config: {
+                'config':{
+                    appId       : '<%= appId %>',
+                    redirectUrl : '<%= redirectUrl %>'
+                }
+            }
+        };
+    </script>
+</head>
+<body>
+    <h1>Mafon - коллективный плеер <%= appId %></h1>
+    <button class="js-open-auth">Авторизация</button>
+
+    <h2>Поиск музыки</h2>
+    <form class="js-search-form">
+        <input type="text" name="search" class="js-search-input">
+        <button type="submit">Искать</button>
+    </form>
+
+
+    <script data-main="/js/main" src="/js/vendors/requirejs/require.js"></script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+{
+  "name": "Mafon",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node /server/app.js"
+  },
+  "dependencies": {
+    "vk-api": "~0.1.0"
+  }
+}

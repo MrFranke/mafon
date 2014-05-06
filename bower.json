@@ -1,0 +1,6 @@
+{
+  "name": "mafon",
+  "dependencies": {
+    "exoskeleton": "~0.6.3"
+  }
+}
