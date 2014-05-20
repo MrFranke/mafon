@@ -22,10 +22,11 @@
     <button class="js-open-auth">Авторизация</button>
 
     <h2>Поиск музыки</h2>
-    <form class="js-search-form">
+    <form class="js-search-form" onsubmit="return false;">
         <input type="text" name="search" class="js-search-input">
         <button type="submit">Искать</button>
     </form>
+    <div id="playlist"></div>
 
 
     <script data-main="/js/main" src="/js/vendors/requirejs/require.js"></script>

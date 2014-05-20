@@ -1,13 +1,11 @@
 require([
     'config',
-    '/js/app/auth/main.js',
-    '/js/app/search/main.js'
-], function( config, auth, search ) {
+    '/js/app/app.js'
+], function( config, app ) {
     VK.init({
         apiId: config.appId,
         scope: 'audio'
     });
 
-    auth.init();
-    search.init();
+    app.start();
 });

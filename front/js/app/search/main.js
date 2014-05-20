@@ -11,19 +11,15 @@ define([
     }
 
     function bindEvents () {
-        console.log($searchForm);
-        $searchForm.addEventListener('submit', function () {
+        $searchForm.addEventListener('submit', function (e) {
             e.preventDefault();
-            search();
-            return false;
+            search( $searchInput.value );
         });
     }
 
-    function search () {
-        e.preventDefault();
-
-        VK.api('audio.search', { q: $searchInput.value }, function ( res ) {
-            console.log('result: ', res);
+    function search ( query ) {
+        VK.api('audio.search', { q: query }, function ( res ) {
+            console.log('faunded music: ', res);
         });
     }
 

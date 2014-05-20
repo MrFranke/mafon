@@ -4,8 +4,8 @@ var vkApi = require('vk-api')
   , OPTIONS = {
     appId: 4341846,
     appSecret: 'l337z3iVaPzoifypmH6I',
-    redirectUrl: 'http://localhost:8080',
-    port: 8080
+    redirectUrl: 'http://localhost:8090',
+    port: 8090
   };
 
 var VK = new vkApi({appID: OPTIONS.appId, appSecret: OPTIONS.appSecret}, OPTIONS.redirectUrl)
