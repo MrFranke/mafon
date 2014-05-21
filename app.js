@@ -1,5 +1,4 @@
-var vkApi = require('vk-api')
-  , express = require('express')
+var express = require('express')
 
   , OPTIONS = {
     appId: 4341846,
@@ -8,8 +7,7 @@ var vkApi = require('vk-api')
     port: 8090
   };
 
-var VK = new vkApi({appID: OPTIONS.appId, appSecret: OPTIONS.appSecret}, OPTIONS.redirectUrl)
-  , app = express();
+var app = express();
 
 
 app.set('views', __dirname + '/front/view');
@@ -18,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/front'));
 
 app.get('/', function(req, res){
-  res.render('index', OPTIONS);
+    res.render('index', OPTIONS);
 });
 
 app.listen( OPTIONS.port );

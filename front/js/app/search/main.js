@@ -20,6 +20,7 @@ define([
     function search ( query ) {
         VK.api('audio.search', { q: query }, function ( res ) {
             console.log('faunded music: ', res);
+
         });
     }
 
