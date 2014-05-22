@@ -8,7 +8,7 @@ define([
 ) {
     var PlaylistModel = Backbone.Model.extend({
         defaults: {
-            songs: []
+            songs: [] // Список песен в плейлисте
         }
     });
 

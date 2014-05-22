@@ -2,11 +2,13 @@
  * Модуль плейлиста
  */
 define([
-    '/js/app/playlist/model.js'
+    '/js/app/playlist/model.js',
+    '/js/app/playlist/controller.js'
 ], function (
-    PlaylistModel
+    Model,
+    Controller
 ) {
-    console.log(PlaylistModel);
+    //console.log(Model);
 
     return {
 
