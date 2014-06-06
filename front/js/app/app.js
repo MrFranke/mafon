@@ -2,9 +2,8 @@
  * Init фаил приложения
  */
 define([
-    '/js/app/auth/main.js',
-    '/js/app/search/main.js',
-    '/js/app/playlist/main.js'
+    'app/auth/main',
+    'app/playlist/main'
 ], function (
     auth,
     search,
@@ -13,7 +12,6 @@ define([
 
     function start () {
         auth.init();
-        search.init();
     }
 
     return {

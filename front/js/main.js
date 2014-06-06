@@ -1,6 +1,6 @@
 require([
     'config',
-    '/js/app/app.js'
+    'app/app'
 ], function( config, app ) {
     VK.init({
         apiId: config.appId,
