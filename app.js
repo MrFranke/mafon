@@ -3,7 +3,7 @@ var express = require('express')
   , OPTIONS = {
     appId: 4341846,
     appSecret: 'l337z3iVaPzoifypmH6I',
-    redirectUrl: 'http://localhost:8090',
+    redirectUrl: 'http://mafon.local:8090',
     port: 8090
   };
 
@@ -25,14 +25,25 @@ app.get('/', function(req, res){
 console.log('Listening for http requests on port ' + OPTIONS.port);
 
 io.on('connection', function(socket){
+    var music;
     console.log('a user connected');
-    socket.on('choise', function( msg ) {
-        console.log('choise: ' + msg.url);
-        var music = new Media(msg.url);
-        music.play(); // send "-loop 0" to MPlayer to loop the soundtrack forever
 
-        /*exec('mplayer' + ' '+msg.url, function(error, stdout, stderr){
-            console.log(stdout);
-        });*/
+    socket.on('choise', function( msg ) {
+        music = new Media(msg.url);
+        music.play({loop: 1});
+
+        console.log('choise: ' + msg.url);
+    });
+
+    socket.on('pause', function () {
+        music.pause();
+    });
+
+    socket.on('resume', function () {
+        music.resume();
+    });
+
+    socket.on('stop', function () {
+        music.stop();
     });
 });

@@ -1,2 +1,5 @@
-node_modules/
+node_modules/*
 front/js/vendors/
+
+#remove after fix it in repo
+!node_modules/simple-mplayer
