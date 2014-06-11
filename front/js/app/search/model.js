@@ -1,5 +1,5 @@
 /**
- * Модель плейлиста
+ * Модель поиска
  */
 define([
 
@@ -8,7 +8,7 @@ define([
 ) {
     var Model = Backbone.Model.extend({
         defaults: {
-            songs: []
+            songs: [] // Список песен в плейлисте
         }
     });
 

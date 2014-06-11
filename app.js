@@ -11,7 +11,6 @@ var app = express();
 var server = app.listen(OPTIONS.port);
 var io = require('socket.io').listen(server);
 var Media = require('simple-mplayer');
-var exec = require('child_process').exec;
 
 app.set('views', __dirname + '/front/view');
 app.set('view engine', 'ejs');
@@ -25,8 +24,8 @@ app.get('/', function(req, res){
 console.log('Listening for http requests on port ' + OPTIONS.port);
 
 io.on('connection', function(socket){
-    var music;
-    console.log('a user connected');
+    var music
+      , actions = ['play', 'pause', 'resume', 'stop'];
 
     socket.on('choise', function( msg ) {
         music = new Media(msg.url);
@@ -35,15 +34,11 @@ io.on('connection', function(socket){
         console.log('choise: ' + msg.url);
     });
 
-    socket.on('pause', function () {
-        music.pause();
-    });
-
-    socket.on('resume', function () {
-        music.resume();
-    });
-
-    socket.on('stop', function () {
-        music.stop();
+    actions.forEach(function ( action ) {
+        socket.on(action, function () {
+            if ( music ) {
+                music[action]();
+            }
+        });
     });
 });

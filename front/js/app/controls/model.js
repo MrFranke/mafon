@@ -1,5 +1,5 @@
 /**
- * Модель плейлиста
+ * Модель контролов
  */
 define([
 
@@ -8,7 +8,9 @@ define([
 ) {
     var Model = Backbone.Model.extend({
         defaults: {
-            songs: []
+            played: false,
+            paused: false,
+            vol: 0
         }
     });
 

@@ -3,11 +3,11 @@
  */
 define([
     'app/auth/main',
+    'app/search/main',
+    'app/controls/main',
     'app/playlist/main'
 ], function (
-    auth,
-    search,
-    playlist
+    auth
 ) {
 
     function start () {

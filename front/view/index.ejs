@@ -25,17 +25,14 @@
     <h1>Mafon - коллективный плеер <%= appId %></h1>
     <button class="js-open-auth">Авторизация</button>
 
-    <div class="playlist">
-        <h2>Поиск музыки</h2>
-        <form class="playlist__search" onsubmit="return false;">
-            <input type="text" name="search" class="playlist__search__field">
-            <button type="submit">Искать</button>
-        </form>
+    <!-- Инклюдим модуль панели управления  -->
+    <div class="controls"></div>
 
-        <ul class="playlist__list">
+    <!-- Инклюдим модуль плейлиста  -->
+    <div class="playlist"></div>
 
-        </ul>
-    </div>
+    <!-- Инклюдим модуль поиска по музыке  -->
+    <div class="search"></div>
 
 
     <script data-main="/js/main" src="/js/vendors/requirejs/require.js"></script>
