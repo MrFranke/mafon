@@ -2,17 +2,21 @@
  * Модель плейлиста
  */
 define([
-
+    'app/song/model',
+    'backbone'
 ], function (
-
+    Song,
+    Backbone
 ) {
-    var Model = Backbone.Model.extend({
-        defaults: {
-            songs: []
+    var Collection = Backbone.Collection.extend({
+        backend: 'songs',
+        model: Song,
+        initialize: function() {
+            this.bindBackend();
         }
     });
 
 
 
-    return new Model();
+    return new Collection();
 });

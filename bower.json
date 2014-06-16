@@ -2,6 +2,7 @@
   "name": "mafon",
   "dependencies": {
     "exoskeleton": "~0.6.3",
-    "requirejs-ejs-plugin": "https://github.com/whitcomb/requirejs-ejs.git"
+    "requirejs-ejs-plugin": "https://github.com/whitcomb/requirejs-ejs.git",
+    "lodash": "~2.4.1"
   }
 }

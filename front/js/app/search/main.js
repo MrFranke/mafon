@@ -47,10 +47,6 @@ define([
 
         choise: function ( e ) {
             var url = e.delegateTarget.getAttribute('data-song-url');
-            socket.emit('choise', {
-                url: url
-            });
-
             return false;
         }
 

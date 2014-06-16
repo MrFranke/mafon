@@ -10,6 +10,7 @@
     "socket.io": "~1.0.4",
     "simple-mplayer": "0.0.3",
     "express": "~4.4.1",
-    "ejs": "~1.0.0"
+    "ejs": "~1.0.0",
+    "backbone.io": "~0.4.1"
   }
 }

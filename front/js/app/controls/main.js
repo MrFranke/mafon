@@ -8,6 +8,7 @@ define([
     Model,
     Tmp
 ) {
+
     var Controls = Backbone.View.extend({
         el: '.controls',
         model: Model,
@@ -24,7 +25,6 @@ define([
         render: function( model ) {
             // При изменении модели отправляем изменения на сервер
             for ( var action in model.changed ){
-                socket.emit(action, model.get(action));
                 console.log(action);
             }
         },

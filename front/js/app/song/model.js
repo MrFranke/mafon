@@ -1,20 +1,21 @@
 /**
- * Модель контролов
+ * Модель песни
  */
 define([
     'backbone'
 ], function (
     Backbone
 ) {
+
     var Model = Backbone.Model.extend({
         defaults: {
-            played: false,
-            paused: false,
-            vol: 0
+            author: 'unknown',
+            title: 'unknown',
+            time: 0
         }
     });
 
 
 
-    return new Model();
+    return Model;
 });

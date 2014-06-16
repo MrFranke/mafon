@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Mafon</title>
     <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
-    <script src="/js/vendors/exoskeleton/exoskeleton.js"></script>
     <script>
         // Передаем параметры приложения
         var require = {
@@ -15,10 +14,6 @@
                 }
             }
         };
-    </script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script>
-        var socket = io();
     </script>
 </head>
 <body>
@@ -36,20 +31,5 @@
 
 
     <script data-main="/js/main" src="/js/vendors/requirejs/require.js"></script>
-    <script>
-        require.config({
-            baseUrl: '/js/',
-            paths: {
-                'ejs' : 'vendors/ejs/ejs.min',
-                'text': 'vendors/requirejs-text/text',
-                'rejs': 'vendors/requirejs-ejs-plugin/rejs'
-            },
-            shim: {
-                ejs: {
-                    exports: 'ejs'
-                }
-            },
-        });
-    </script>
 </body>
 </html>
